@@ -1,12 +1,16 @@
+// eslint-disable-next-line
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./views/App";
+import { App } from "./views/App";
 import * as serviceWorker from "./serviceWorker";
+import { ThemeProvider, CSSReset } from "@chakra-ui/core";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <CSSReset />
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
